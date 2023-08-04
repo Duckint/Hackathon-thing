@@ -5,7 +5,7 @@ using UnityEngine;
 public class bah : MonoBehaviour
 {
     Rigidbody player;
-    float speed = 0.2f;
+    public float speed = 0.2f;
     // Start is called before the first frame update
     void Start()
     {
