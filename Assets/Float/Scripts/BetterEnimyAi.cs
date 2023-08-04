@@ -39,7 +39,7 @@ public class BetterEnimyAi : MonoBehaviour
     {
         if (target)
         {
-            rb.velocity = new Vector3(MoveDir.x, MoveDir.y, MoveDir.z) * moveSpeed;
+            rb.velocity = new Vector3(MoveDir.x, transform.localPosition.y, MoveDir.z) * moveSpeed;
         }
     }
 }
