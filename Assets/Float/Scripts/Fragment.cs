@@ -11,7 +11,7 @@ public class Fragment : MonoBehaviour
     void Start()
     {
 
-        Player = GameObject.Find("Playercam");
+        Player = GameObject.FindWithTag("Player");
 
         //Player.GetComponent<PlayerStats>().HasAngryFrag = true;
 

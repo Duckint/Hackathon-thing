@@ -12,11 +12,17 @@ public class FPCamera : MonoBehaviour
     public float minTurnAngle = -90.0f;
     public float maxTurnAngle = 90.0f;
     float rotateX;
+
+    public bool CutSceane = false;
     void Update ()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        mousestuff();
-        kbstuff();
+
+        if (!CutSceane)
+        {
+            mousestuff();
+            kbstuff();
+        }
     }
     void mousestuff ()
     {
