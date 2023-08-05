@@ -17,8 +17,8 @@ public class MasterGame : MonoBehaviour
             dontPlaycutscene = false;
             GameObject CameraFollow;
             CameraFollow = GameObject.Find("AcameraBone");
-            transform.position = new Vector3(CameraFollow.transform.position.x, CameraFollow.transform.position.y + 0.53f,
-                CameraFollow.transform.position.z - 0.13f);
+            transform.position = new Vector3(CameraFollow.transform.position.x + 0.01f, CameraFollow.transform.position.y + 0.1f,
+                CameraFollow.transform.position.z - 0.3f);
             transform.rotation = CameraFollow.transform.rotation;
         }
         if (cutscene2)
