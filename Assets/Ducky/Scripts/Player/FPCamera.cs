@@ -18,10 +18,21 @@ public class FPCamera : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
 
-        if (!CutSceane)
+        if (CutSceane)
         {
             mousestuff();
             kbstuff();
+
+            Debug.Log("no cut");
+        }
+        if (!CutSceane)
+        {
+            GameObject CameraFollow;
+            CameraFollow = GameObject.Find("AcameraBone");
+
+            Debug.Log("yes cut");
+            transform.position = CameraFollow.transform.position;
+            transform.rotation = CameraFollow.transform.rotation;
         }
     }
     void mousestuff ()
