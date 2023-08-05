@@ -1,0 +1,51 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Fragment : MonoBehaviour
+{
+
+    public GameObject Player;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
+        Player = GameObject.Find("Playercam");
+
+        //Player.GetComponent<PlayerStats>().HasAngryFrag = true;
+
+        if (Player.GetComponent<PlayerStats>().HasAngyFragment)
+        {
+
+            Debug.Log("Has");
+
+        }
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+
+                Player.GetComponent<PlayerStats>().HasAngyFragment = true;
+            }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        //if (collision != null) { return; }
+
+        
+    }
+}
