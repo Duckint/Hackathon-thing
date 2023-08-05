@@ -11,20 +11,20 @@ public class FPCamera : MonoBehaviour
     public float Speed = 2.0f;
     public float minTurnAngle = -90.0f;
     public float maxTurnAngle = 90.0f;
-    float rotateX;
+    public float rotateX;
     void Update ()
     {
-        MasterGame mgobj = new MasterGame();
+        GameObject mgobj = GameObject.FindWithTag("Player");
         Cursor.lockState = CursorLockMode.Locked;
 
-        if (mgobj.playcutscene)
+        if (mgobj.GetComponent<MasterGame>().dontPlaycutscene)
         {
             mousestuff();
             kbstuff();
         }
-        if (!mgobj.playcutscene)
+        if (!mgobj.GetComponent<MasterGame>().dontPlaycutscene)
         {
-           mgobj.Cutscenes();
+            mgobj.GetComponent<MasterGame>().Cutscenes();
         }
     }
     void mousestuff ()

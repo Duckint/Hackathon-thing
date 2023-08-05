@@ -1591,10 +1591,21 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3710477559538568985, guid: b1b94f41a30ced643801282ec4ac9d16, type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3710477559538568985, guid: b1b94f41a30ced643801282ec4ac9d16, type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1707488368701824566, guid: b1b94f41a30ced643801282ec4ac9d16, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 499361665}
     - targetCorrespondingSourceObject: {fileID: 1707488368701824566, guid: b1b94f41a30ced643801282ec4ac9d16, type: 3}
       insertIndex: -1
       addedObject: {fileID: 499361656}
@@ -1619,6 +1630,21 @@ MonoBehaviour:
   Health: 0
   HasAngyFragment: 0
   HasFFragemt: 0
+--- !u!114 &499361665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499361648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c429e0ada06434aa3374cb2aa4fdd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontPlaycutscene: 0
+  cutscene1: 0
+  cutscene2: 0
 --- !u!1 &536378079 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: d36da1e70be128f4eb6765807d2f677e, type: 3}

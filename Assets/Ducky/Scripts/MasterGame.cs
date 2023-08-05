@@ -5,20 +5,20 @@ using UnityEngine;
 
 public class MasterGame : MonoBehaviour
 {
-    public bool playcutscene = false;
-    public bool cutscene1 = false;
+    public bool dontPlaycutscene = false;
+    bool cutscene1 = true;
     public bool cutscene2 = false;
 
     public void Cutscenes()
     {
-        FPCamera fpobj = new FPCamera();
         if (cutscene1)
         {
             //false is true, true is false dont ask it just is
-            playcutscene = false;
+            dontPlaycutscene = false;
             GameObject CameraFollow;
             CameraFollow = GameObject.Find("AcameraBone");
-            transform.position = CameraFollow.transform.position;
+            transform.position = new Vector3(CameraFollow.transform.position.x, CameraFollow.transform.position.y + 0.53f,
+                CameraFollow.transform.position.z - 0.13f);
             transform.rotation = CameraFollow.transform.rotation;
         }
         if (cutscene2)
