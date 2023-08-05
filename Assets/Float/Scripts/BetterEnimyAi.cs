@@ -18,7 +18,7 @@ public class BetterEnimyAi : MonoBehaviour
 
     void Start()
     {
-        target = GameObject.Find("Player").transform;
+        target = GameObject.Find("Playercam").transform;
     }
 
     // Update is called once per frame

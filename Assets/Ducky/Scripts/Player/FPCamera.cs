@@ -6,26 +6,30 @@ using UnityEngine.XR;
 
 public class FPCamera : MonoBehaviour
 {
-    Camera fpcamera;
-    private float turnspeed;
-
-    private float rotateX;
-    // Start is called before the first frame update
-    void Start()
-    {
-        fpcamera = GetComponent<Camera>();
-       
-        
-    }
-
-    // Update is called once per frame
-    void Update()
+   
+    public float turnSpeed = 4.0f;
+    public float Speed = 2.0f;
+    public float minTurnAngle = -90.0f;
+    public float maxTurnAngle = 90.0f;
+    float rotateX;
+    void Update ()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        turnspeed = 0.5f;
-        float rotateY = Input.GetAxis("Mouse X") * turnspeed;
-        rotateX += Input.GetAxis("Mouse Y") * turnspeed;
-
+        mousestuff();
+        kbstuff();
+    }
+    void mousestuff ()
+    {
+        float rotateY = Input.GetAxis("Mouse X") * turnSpeed;
+        rotateX += Input.GetAxis("Mouse Y") * turnSpeed;
+        rotateX = Mathf.Clamp(rotateX, minTurnAngle, maxTurnAngle);
         transform.eulerAngles = new Vector3(-rotateX, transform.eulerAngles.y + rotateY, 0);
+    }
+    void kbstuff ()
+    {
+        Vector3 direction = new Vector3(0, 0, 0);
+        direction.x = Input.GetAxis("Horizontal");
+        direction.z = Input.GetAxis("Vertical");
+        transform.Translate(direction * Speed * Time.deltaTime);
     }
 }
