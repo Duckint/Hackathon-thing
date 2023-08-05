@@ -12,14 +12,7 @@ public class Abilities : MonoBehaviour
         fun2 = GameObject.Find("Arms");
         fun = GetComponent<Animator>();
     }
-
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.K))
-        {
-            fun2.GetComponent<Animator>().SetTrigger("punchtrig");
-        }
-    }
+    
     private void OnCollisionStay(Collision collide)
     {
 
@@ -27,6 +20,7 @@ public class Abilities : MonoBehaviour
         {
             if (Input.GetMouseButton(0))
             {
+                fun2.GetComponent<Animator>().SetTrigger("punchtrig");
                 Destroy(collide.gameObject);
             }
             
