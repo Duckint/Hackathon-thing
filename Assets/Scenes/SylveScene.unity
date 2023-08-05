@@ -1643,7 +1643,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontPlaycutscene: 0
-  cutscene1: 0
   cutscene2: 0
 --- !u!1 &536378079 stripped
 GameObject:
