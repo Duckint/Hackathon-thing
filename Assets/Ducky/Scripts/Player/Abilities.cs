@@ -17,6 +17,8 @@ public class Abilities : MonoBehaviour
 
     private void Update()
     {
+        
+        
         if (Input.GetKey(KeyCode.Alpha1))
         {
             fun2.GetComponent<Animator>().SetTrigger("punchtrig");

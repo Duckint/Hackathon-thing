@@ -12,27 +12,19 @@ public class FPCamera : MonoBehaviour
     public float minTurnAngle = -90.0f;
     public float maxTurnAngle = 90.0f;
     float rotateX;
-
-    public bool CutSceane = false;
     void Update ()
     {
+        MasterGame mgobj = new MasterGame();
         Cursor.lockState = CursorLockMode.Locked;
 
-        if (CutSceane)
+        if (mgobj.playcutscene)
         {
             mousestuff();
             kbstuff();
-
-            Debug.Log("no cut");
         }
-        if (!CutSceane)
+        if (!mgobj.playcutscene)
         {
-            GameObject CameraFollow;
-            CameraFollow = GameObject.Find("AcameraBone");
-
-            Debug.Log("yes cut");
-            transform.position = CameraFollow.transform.position;
-            transform.rotation = CameraFollow.transform.rotation;
+           mgobj.Cutscenes();
         }
     }
     void mousestuff ()
