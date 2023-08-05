@@ -8,6 +8,7 @@ public class PlayerStats : MonoBehaviour
     public float Health;
 
     public bool HasAngyFragment = false;
+    public bool HasFFragemt = false;
 
     // Start is called before the first frame update
     void Start()

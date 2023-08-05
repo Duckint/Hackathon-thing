@@ -30,6 +30,8 @@ public class Fragment : MonoBehaviour
 
     }
 
+    
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Player")
@@ -38,14 +40,8 @@ public class Fragment : MonoBehaviour
             {
 
                 Player.GetComponent<PlayerStats>().HasAngyFragment = true;
+                Player.GetComponent<PlayerStats>().HasFFragemt = true;
             }
         }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        //if (collision != null) { return; }
-
-        
     }
 }
