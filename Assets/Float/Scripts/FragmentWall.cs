@@ -7,6 +7,7 @@ public class FragmentWall : MonoBehaviour
 {
 
     public GameObject Player;
+    public int toOpen;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,7 @@ public class FragmentWall : MonoBehaviour
 
     public bool CheckFragmentStates()
     {
-        if (Player.GetComponent<PlayerStats>().Fragments >= 3)
+        if (Player.GetComponent<PlayerStats>().Fragments >= toOpen)
         {
             return true;
         }
@@ -38,7 +39,7 @@ public class FragmentWall : MonoBehaviour
             if (CheckFragmentStates())
             {
                 Debug.Log("YOU DID IT");
-                GameObject.Destroy(GameObject.Find("MainWall"));
+                GameObject.Destroy(this.transform.parent.gameObject) ;
             }
         }
     }
