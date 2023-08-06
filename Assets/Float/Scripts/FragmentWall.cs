@@ -16,7 +16,8 @@ public class FragmentWall : MonoBehaviour
     public bool CheckFragmentStates()
     {
         if (Player.GetComponent<PlayerStats>().HasAngyFragment == true &&
-            Player.GetComponent<PlayerStats>().HasFFragemt == true)
+            Player.GetComponent<PlayerStats>().HasFFragemt == true &&
+            Player.GetComponent<PlayerStats>().HasFirstFragemt == true)
         {
             return true;
         }

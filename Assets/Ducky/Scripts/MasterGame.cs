@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class MasterGame : MonoBehaviour
 {
-    public bool dontPlaycutscene = false;
-    bool cutscene1 = true;
+    public bool dontPlaycutscene = true;
+    bool cutscene1 = false;
     public bool cutscene2 = false;
     private double timepassed = 0;
 

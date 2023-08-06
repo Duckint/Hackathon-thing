@@ -41,6 +41,7 @@ public class Fragment : MonoBehaviour
 
                 Player.GetComponent<PlayerStats>().HasAngyFragment = true;
                 Player.GetComponent<PlayerStats>().HasFFragemt = true;
+                Player.GetComponent<PlayerStats>().HasFirstFragemt = true;
             }
         }
     }
