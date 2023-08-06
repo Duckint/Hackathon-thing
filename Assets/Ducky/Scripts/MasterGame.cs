@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class MasterGame : MonoBehaviour
 {
+    public bool InMenu = true;
     public bool dontPlaycutscene = true;
     public bool cutscene1 = false;
     public bool cutscene2 = false;
