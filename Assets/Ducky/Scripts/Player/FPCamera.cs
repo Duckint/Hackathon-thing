@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -12,10 +13,12 @@ public class FPCamera : MonoBehaviour
     public float minTurnAngle = -90.0f;
     public float maxTurnAngle = 90.0f;
     public float rotateX;
+    private bool booleanu;
     void Update ()
     {
         GameObject mgobj = GameObject.FindWithTag("Player");
         Cursor.lockState = CursorLockMode.Locked;
+        
 
         if (mgobj.GetComponent<MasterGame>().dontPlaycutscene)
         {
@@ -41,4 +44,6 @@ public class FPCamera : MonoBehaviour
         direction.z = Input.GetAxis("Vertical");
         transform.Translate(direction * Speed * Time.deltaTime);
     }
+
+
 }
