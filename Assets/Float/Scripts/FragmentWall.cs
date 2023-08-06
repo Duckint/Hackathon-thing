@@ -15,9 +15,7 @@ public class FragmentWall : MonoBehaviour
 
     public bool CheckFragmentStates()
     {
-        if (Player.GetComponent<PlayerStats>().HasAngyFragment == true &&
-            Player.GetComponent<PlayerStats>().HasFFragemt == true &&
-            Player.GetComponent<PlayerStats>().HasFirstFragemt == true)
+        if (Player.GetComponent<PlayerStats>().Fragments >= 3)
         {
             return true;
         }
@@ -30,7 +28,7 @@ public class FragmentWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Debug.Log(Player.GetComponent<PlayerStats>().HasAngyFragment);
     }
 
     private void OnTriggerStay(Collider other)

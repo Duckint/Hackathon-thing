@@ -15,7 +15,7 @@ public class Fragment : MonoBehaviour
 
         //Player.GetComponent<PlayerStats>().HasAngryFrag = true;
 
-        if (Player.GetComponent<PlayerStats>().HasAngyFragment)
+        if (Player.GetComponent<PlayerStats>().Fragments > 0)
         {
 
             Debug.Log("Has");
@@ -39,9 +39,11 @@ public class Fragment : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
 
-                Player.GetComponent<PlayerStats>().HasAngyFragment = true;
-                Player.GetComponent<PlayerStats>().HasFFragemt = true;
-                Player.GetComponent<PlayerStats>().HasFirstFragemt = true;
+                Player.GetComponent<PlayerStats>().Fragments++;
+
+                Debug.Log(Player.GetComponent<PlayerStats>().Fragments);
+
+                Destroy(this.gameObject);
             }
         }
     }
